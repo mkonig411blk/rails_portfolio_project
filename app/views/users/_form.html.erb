@@ -1,0 +1,27 @@
+<%= form_for(user) do |f| %>
+<div class='field'>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+</div>
+  <div class='field'>
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+  </div>
+  <div class='field'>
+    <%= f.label :height, "Height (in inches)" %><br />
+    <%= f.number_field :height %>
+  </div>
+  <div class='field'>
+    <%= f.label :sport, "What is your favorite sport?" %><br />
+    <%= f.number_field :sport %>
+  </div>
+  <div class='field'>
+    <%= f.label :city, "In what city do you live?" %><br />
+    <%= f.number_field :city %>
+  </div>
+  <div>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+  <%= f.submit button_label %>
+<% end %>
