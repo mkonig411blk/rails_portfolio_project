@@ -1,5 +1,10 @@
 <h1>Welcome to Margot's "Join a Team" site!</h1>
+<% if session[:user_id] %>
+  <h1><%= @user.name %></h1>
+  <h2>Username: <%= @user.username %></h2>
+<% else %>
     <div >
       <%= link_to 'Sign In', signin_path %>
       <%= link_to 'Sign Up', '/users/new' %>
     </div>
+<% end %>

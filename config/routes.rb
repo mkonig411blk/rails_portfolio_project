@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get '/signin' => 'users#signin', as: :signin
   post '/login' => 'users#login', as: :login
   get '/logout' => 'users#logout', as: :logout
+  get '/auth/facebook/callback' => 'sessions#create'
 end
