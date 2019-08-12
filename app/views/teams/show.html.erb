@@ -3,4 +3,8 @@
 <p><strong>City: </strong><%= @team.city %></p>
 <p><strong>Practice Location: </strong><%= @team.practice_location %></p>
 <p><strong>Practice Days: </strong><%= @team.practice_days %></p>
-    <%= button_to 'Join team!', '/signups/new' %>
+<p><strong>Current Players: </strong> <% @teamsignups.each do |p| %>
+    <li><%= @p.user.name %></li>
+    <li><%= @p.skill_level %></li>
+    <% end %>
+    <%= link_to 'Join team!', '/signups/new' %>

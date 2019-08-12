@@ -1,0 +1,15 @@
+<%= form_for(signup) do |f| %>
+<div class='field'>
+    <%= f.label :user %><br />
+    <%= f.text_field :user, :value => current_user.name %>
+</div>
+  <div class='field'>
+    <%= f.label :team %><br />
+    <%= f.text_field :team %>
+  </div>
+  <div>
+    <%= f.label :skill_level %>
+    <%= f.select :skill_level, options_for_select(["High","Medium","Low"]) %>
+  </div>
+  <%= f.submit button_label %>
+<% end %>

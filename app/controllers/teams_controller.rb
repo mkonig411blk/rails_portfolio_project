@@ -5,7 +5,8 @@ class TeamsController < ApplicationController
     end
 
     def myindex
-        @myteams = current_user.signups.teams
+        @user = current_user
+        @myteams = @user.teams
     end
 
     def create
@@ -15,5 +16,6 @@ class TeamsController < ApplicationController
 
     def show
         @team = Team.find(params[:id])
+        @teamsignups = @team.signups
     end
 end
