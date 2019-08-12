@@ -1,10 +1,11 @@
 <h1>Welcome to Margot's "Join a Team" site!</h1>
-<% if session[:user_id] %>
-  <h1><%= @user.name %></h1>
+<% if logged_in? %>
+  <h2>Currently logged in as: <%= @user.name %></h2>
+  <p><%= link_to 'Show my profile', user_path(@user) %></p>
 <% else %>
     <div >
       <%= link_to 'Login', login_path %>
       <%= link_to 'Sign Up', '/users/new' %>
-      <%= link_to('Log in with Facebook!', '/auth/facebook') %>
+      <%= link_to 'Log in with Facebook!', '/auth/facebook', method: :post%>
     </div>
 <% end %>

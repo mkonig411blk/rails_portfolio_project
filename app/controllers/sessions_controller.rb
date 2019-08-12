@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
         render :login
     end
 
-#regular signin
+#regular login
   def create
     # @user = User.find_by(username: params[:username])
     # return head(:forbidden) unless @user.authenticate(params[:password])
@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
     @user = User.find_by(email: params[:user][:email])
     if @user && @user.authenticate(params[:user][:password])
         session[:user_id] = @user.id
-        redirect_to goals_path
+        redirect_to user_path(@user)
     else
         flash[:error] = "Sorry, your email or password is incorrect."
         redirect_to '/login'
@@ -27,7 +27,7 @@ class SessionsController < ApplicationController
     u.email = auth['info']['email']
     end
     session[:user_id] = @user.id
-    render 'welcome/home'
+    redirect_to 'users/welcome'
   end
 
   def destroy
