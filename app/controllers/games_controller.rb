@@ -13,7 +13,7 @@ class GamesController < ApplicationController
     def create
         @game = Game.new(game_params)
         @game.save
-        redirect_to mygames_path
+        redirect_to games_path
     end
 
     def index

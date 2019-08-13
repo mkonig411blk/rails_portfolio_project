@@ -14,8 +14,12 @@
   <%= f.text_field :location %>
 </div>
 <div class='field'>
+  <%= f.label :date%><br />
+  <%= f.date_field :date %>
+</div>
+<div class='field'>
   <%= f.label :away_team_id%><br />
-  <%= f.collection_select :away_team_id, Team.all, :id, :name %>
+  <%= f.collection_select :away_team_id, Team.all, :id, :team_city%>
 </div>
   <%= f.submit "Challenge"%>
 <% end %>

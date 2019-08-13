@@ -12,4 +12,7 @@ class Team < ApplicationRecord
       where(city: ['Dallas, TX']).order('name ASC')
   end
 
+  def team_city
+      "#{name} (#{city})"
+  end 
 end
