@@ -19,7 +19,7 @@
 </div>
 <div class='field'>
   <%= f.label :away_team_id%><br />
-  <%= f.collection_select :away_team_id, Team.all, :id, :team_city%>
-</div>
+  <%= f.collection_select :away_team_id, Team.all, :id, :team_city_sport%>
+</div><br />
   <%= f.submit "Challenge"%>
 <% end %>
