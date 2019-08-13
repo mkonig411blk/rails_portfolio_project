@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
   # teams & signups
   resources :teams, only: [:show, :index] do
-      resources :signups, only: [:new]
+      resources :signups, only: [:new, :create]
   end
   get '/myteams' => 'teams#myindex'
+  resources :signups, only: [:new, :create, :show, :index]
   # users
-  resources :users, only: [:new, :show, :edit]
+  resources :users, only: [:new, :create, :show, :edit]
   root 'users#welcome'
   # sessions
   get '/login' => 'sessions#new'

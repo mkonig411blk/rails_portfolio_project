@@ -7,4 +7,4 @@
     <li><%= @p.user.name %></li>
     <li><%= @p.skill_level %></li>
     <% end %>
-    <%= link_to 'Join team!', '/signups/new' %>
+    <%= link_to 'Join team!', new_team_signup_path(@team.id) %>

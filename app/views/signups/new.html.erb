@@ -1,3 +1,10 @@
-<h1>Join a team!</h1>
-
-<%= render partial: 'form', locals:{signup: @signup, button_label: "Join Team"} %>
+<h1>Join <%= @team.name %>!</h1>
+<%= form_for(@signup) do |f| %>
+<%= f.hidden_field :team_id %>
+<%= f.hidden_field :user_id %>
+  <div>
+    My <%= @team.sport %> <%=  f.label :skill_level %>
+     <%= f.select :skill_level, options_for_select(["High","Medium","Low"]) %>
+  </div>
+  <%= f.submit "Join Team"%>
+<% end %>
