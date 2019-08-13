@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_08_174001) do
+ActiveRecord::Schema.define(version: 2019_08_13_055129) do
+
+  create_table "games", force: :cascade do |t|
+    t.string "name"
+    t.string "city"
+    t.string "location"
+    t.datetime "date"
+    t.integer "home_team_id"
+    t.integer "away_team_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "signups", force: :cascade do |t|
     t.integer "team_id"

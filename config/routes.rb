@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  # games
+  resources :games
   # teams & signups
   resources :teams, only: [:show, :index] do
       resources :signups, only: [:new, :create]
+      resources :games, only: [:new, :create, :show, :index]
   end
   get '/myteams' => 'teams#myindex'
   resources :signups, only: [:new, :create, :show, :index]

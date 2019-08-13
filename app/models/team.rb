@@ -1,7 +1,7 @@
 class Team < ApplicationRecord
     has_many :signups
     has_many :users, through: :signups
-    # has_many :matches
+    has_many :games
 
 
   def self.southtx

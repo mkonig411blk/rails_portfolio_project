@@ -1,0 +1,21 @@
+<h4>Challenge another team to play the <%= @team.name %>!</h4>
+<%= form_for(@game) do |f| %>
+<%= f.hidden_field :home_team_id %>
+<div class='field'>
+  <%= f.label :name %><br />
+  <%= f.text_field :name %>
+</div>
+<div class='field'>
+  <%= f.label :city%><br />
+  <%= f.text_field :city %>
+</div>
+<div class='field'>
+  <%= f.label :location%><br />
+  <%= f.text_field :location %>
+</div>
+<div class='field'>
+  <%= f.label :away_team_id%><br />
+  <%= f.collection_select :away_team_id, Team.all, :id, :name %>
+</div>
+  <%= f.submit "Challenge"%>
+<% end %>
