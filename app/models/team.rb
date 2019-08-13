@@ -12,4 +12,8 @@ class Team < ApplicationRecord
       where(city: ['Dallas, TX']).order('sport ASC')
   end
 
+  def team_city_sport
+      "#{name} (#{city} - #{sport})"
+  end
+
 end
