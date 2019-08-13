@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :signups, only: [:new, :create, :show, :index]
   delete '/leaveteam/:team_id' => 'signups#destroy'
   # users
-  resources :users, only: [:new, :create, :show, :edit]
+  resources :users
   root 'users#welcome'
   # sessions
   get '/login' => 'sessions#new'

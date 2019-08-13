@@ -1,11 +1,11 @@
-<h1>My Teams</h1>
-<h2>Click a team to view!</h2>
+<h4>My Teams</h4>
+<h5>Click a team to view!</h5>
 <ul>
   <% @myteams.each do |team| %>
-    <strong><%= link_to team.name, team_path(team) %></strong>
-    <li>Sport: <%= team.sport %></li>
-    <li>City: <%= team.city %></li>
-    <li>Practice Location: <%= team.practice_location %></li>
-    <li>Pratice Days: <%= team.practice_days %></li>
+    <strong><%= link_to team.name, team_path(team) %></strong></br>
+    <span>Sport: <%= team.sport %></span></br>
+    <span>City: <%= team.city %></span></br>
+    <span>Practice Location: <%= team.practice_location %></span></br>
+    <span>Pratice Days: <%= team.practice_days %></span></br>
   <% end %>
 </ul>

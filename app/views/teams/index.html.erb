@@ -1,23 +1,23 @@
-<h1>All Teams</h1>
-<h2>Click a team to view!</h2>
-<h4>North Texas Teams</h4>
+<h4>All Teams</h4>
+<h5>Click a team to view!</h5>
+<h6>North Texas Teams</h6>
 <ul>
   <% @northtxteams.each do |team| %>
-    <strong><%= link_to team.name, team_path(team) %></strong>
-    <li>Sport: <%= team.sport %></li>
-    <li>City: <%= team.city %></li>
-    <li>Practice Location: <%= team.practice_location %></li>
-    <li>Pratice Days: <%= team.practice_days %></li>
+    <strong><%= link_to team.name, team_path(team) %></strong></br>
+    <span>Sport: <%= team.sport %></span></br>
+    <span>City: <%= team.city %></span></br>
+    <span>Practice Location: <%= team.practice_location %></span></br>
+    <span>Pratice Days: <%= team.practice_days %></span></br>
   <% end %>
 </ul>
 
-<h4>South Texas Teams</h4>
+<h6>South Texas Teams</h6>
 <ul>
   <% @southtxteams.each do |team| %>
-    <strong><%= link_to team.name, team_path(team) %></strong>
-    <li>Sport: <%= team.sport %></li>
-    <li>City: <%= team.city %></li>
-    <li>Practice Location: <%= team.practice_location %></li>
-    <li>Pratice Days: <%= team.practice_days %></li>
+    <strong><%= link_to team.name, team_path(team) %></strong></br>
+    <span>Sport: <%= team.sport %></span></br>
+    <span>City: <%= team.city %></span></br>
+    <span>Practice Location: <%= team.practice_location %></span></br>
+    <span>Pratice Days: <%= team.practice_days %></span></br>
   <% end %>
 </ul>

@@ -1,14 +1,15 @@
 <%= form_for(user) do |f| %>
-<div class='field'>
+<div class="form-group">
+<div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
 </div>
-  <div class='field'>
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.text_field :email %>
   </div>
-  <div>
-    <%= f.label :password %>
+  <div class='field'>
+    <%= f.label :password %><br />
     <%= f.password_field :password %>
   </div>
   <div class='field'>
@@ -25,3 +26,4 @@
   </div>
   <%= f.submit button_label %>
 <% end %>
+</div>

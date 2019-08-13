@@ -1,12 +1,13 @@
-<p><strong>Name:</strong> <%= @team.name %></p>
+<h4><strong>Join the...</strong> <%= @team.name %></h4>
 <p><strong>Sport: </strong><%= @team.sport %></p>
 <p><strong>City: </strong><%= @team.city %></p>
 <p><strong>Practice Location: </strong><%= @team.practice_location %></p>
 <p><strong>Practice Days: </strong><%= @team.practice_days %></p>
-<p><strong>Current Players (<%= @team.sport %> Skill Level): </strong> <% @teamsignups.each do |p| %>
-    <li><%= p.user.name %> (<%= p.skill_level %>)</li>
+<p><strong>Current Players (<%= @team.sport %> Skill Level): </strong>
+    <% @teamsignups.each do |p| %>
+        <li><%= p.user.name %> (<%= p.skill_level %>)</li>
     <% end %>
     <% if @users.include? (current_user.id) %>
     <% else %>
-    <%= link_to 'Join the team!', new_team_signup_path(@team.id) %>
+        <%= link_to 'Join the team!', new_team_signup_path(@team.id) %>
     <% end %>
