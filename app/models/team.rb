@@ -5,11 +5,11 @@ class Team < ApplicationRecord
 
 
   def self.southtx
-      where(city: ['Houston, TX', 'Austin, TX', 'San Antonio, TX'])
+      where(city: ['Houston, TX', 'Austin, TX', 'San Antonio, TX']).order('name ASC')
   end
 
   def self.northtx
-      where(city: ['Dallas, TX'])
+      where(city: ['Dallas, TX']).order('name ASC')
   end
 
 end
