@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   end
   get '/myteams' => 'teams#myindex'
   resources :signups, only: [:new, :create, :show, :index]
+  delete '/leaveteam/:team_id' => 'signups#destroy'
   # users
   resources :users, only: [:new, :create, :show, :edit]
   root 'users#welcome'

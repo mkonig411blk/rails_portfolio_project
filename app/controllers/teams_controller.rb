@@ -1,7 +1,8 @@
 class TeamsController < ApplicationController
 
     def index
-        @teams = Team.all
+        @northtxteams = Team.all.northtx
+        @southtxteams = Team.all.southtx
     end
 
     def myindex
@@ -17,5 +18,6 @@ class TeamsController < ApplicationController
     def show
         @team = Team.find(params[:id])
         @teamsignups = @team.signups
+        @users = @teamsignups.collect {|s| s.user_id}
     end
 end

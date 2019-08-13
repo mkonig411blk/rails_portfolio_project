@@ -17,6 +17,12 @@ class SignupsController < ApplicationController
         redirect_to myteams_path
     end
 
+    def destroy
+        @signup = Signup.find_by(user_id: current_user.id, team_id: params[:team_id])
+        @signup.destroy
+        redirect_to myteams_path
+    end
+
     private
 
     def signup_params

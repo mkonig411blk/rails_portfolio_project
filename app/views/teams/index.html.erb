@@ -1,7 +1,19 @@
 <h1>All Teams</h1>
 <h2>Click a team to view!</h2>
+<h4>North Texas Teams</h4>
 <ul>
-  <% @teams.each do |team| %>
+  <% @northtxteams.each do |team| %>
+    <strong><%= link_to team.name, team_path(team) %></strong>
+    <li>Sport: <%= team.sport %></li>
+    <li>City: <%= team.city %></li>
+    <li>Practice Location: <%= team.practice_location %></li>
+    <li>Pratice Days: <%= team.practice_days %></li>
+  <% end %>
+</ul>
+
+<h4>South Texas Teams</h4>
+<ul>
+  <% @southtxteams.each do |team| %>
     <strong><%= link_to team.name, team_path(team) %></strong>
     <li>Sport: <%= team.sport %></li>
     <li>City: <%= team.city %></li>
