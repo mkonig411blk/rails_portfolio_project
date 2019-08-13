@@ -5,6 +5,6 @@
     <span>City: <%= game.city %></span></br>
     <span>Location: <%= game.location %></span></br>
     <span>Date: <%= game.converted_datetime  %></span></br>
-    <span><%=game.home_team_name %> (Home) vs. <%= game.away_team_name %></span></br>
+    <span><%=game.home_team.name %> (Home) vs. <%= game.away_team.name %></span></br>
   <% end %>
 </ul>

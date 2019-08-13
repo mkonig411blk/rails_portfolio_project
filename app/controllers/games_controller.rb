@@ -1,5 +1,5 @@
 class GamesController < ApplicationController
-        
+
     def new
         # if team_id is passed through as a param & that team does not exist, redirect to the team index page
         if params[:team_id] && !Team.exists?(params[:team_id])

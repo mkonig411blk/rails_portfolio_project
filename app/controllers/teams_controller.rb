@@ -1,5 +1,5 @@
 class TeamsController < ApplicationController
-
+    
     def index
         @northtxteams = Team.all.northtx
         @southtxteams = Team.all.southtx
